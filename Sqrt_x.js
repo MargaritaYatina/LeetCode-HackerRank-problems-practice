@@ -4,20 +4,28 @@
  */
 const mySqrt = function (x) {
     
-    let arr =[];
-    for (let i=0; i< x+1; i++){
-        arr[i] =i;
-    }
-    console.log(arr);
-    let l =arr.length;
-    
-
-    for (let i=arr.length; i>=0; i--){
-        if (i*i<=x){
-            return i;
-        }
+    var mySqrt = function(x) {
+        let left = 1;
+        let right = x;
+        let mid;
+        //the square root of 1 or 0 is itself
+        if(x<2) return x;
        
-    }
+        //binsary search
+        while (left < right){
+            mid = Math.trunc((left+right)/2);
+            
+            if (mid*mid ==x){
+                return mid;
+            }
+            else if(mid*mid>x){
+                right =mid;
+            }
+            else left =mid+1
+        }
+        return left-1 ;
+        
+    };
    
 };
 
