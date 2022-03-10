@@ -1,3 +1,10 @@
+//function accepts an array of integers and a number. 
+//The function should calculate the maximum sum of n consecutive
+//elements in the erray
+//maxSybarraySum([1,2,5,2,8,1,5],2) returns 10
+//maxSybarraySum([1,2,5,2,8,1,5],4) returns 17
+//maxSybarraySum([],4) returns null
+
 function maxSubarraySum (arr, num){
     if(arr.length<num){
         return null;
